@@ -1,17 +1,11 @@
-import { test, expect, chromium } from '@playwright/test';
-test.setTimeout(100000);
+import { test, expect } from '@playwright/test';
 
-test('test', async () => {
-
-    const browser = await chromium.launch({ headless: false });
-    const context = await browser.newContext();
-    const page = await context.newPage();
-
-    await page.goto('https://dev.playpod.ir/');
+test('test', async ({ page }) => {
+    await page.goto('https://www.playpod.ir/');
     await page.click('"ورود"');
     await page.waitForNavigation()
     await page.waitForLoadState()
-
-    await page.screenshot({ path: './test/screenshots/aaaprofile.jpg' });
-
+    await page.screenshot();
+    expect(await page.screenshot()).toMatchSnapshot();
+    // expect(await page.textContent("#__next")).toMatchSnapshot();
 });

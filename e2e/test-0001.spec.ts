@@ -1,13 +1,9 @@
-import { test, expect, chromium } from '@playwright/test';
+import { test, expect } from '@playwright/test';
 test.setTimeout(120000);
 
-test('test', async () => {
+test('test', async ({ page }) => {
 
-    const browser = await chromium.launch({headless:false});
-    const context = await browser.newContext();
-    const page = await context.newPage();
- 
-    // Go to https://dev.playpod.ir/
+  // Go to https://dev.playpod.ir/
   await page.goto('https://dev.playpod.ir/');
 
   // Click text=ورود

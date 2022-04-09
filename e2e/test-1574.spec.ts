@@ -1,4 +1,4 @@
-import { test, expect, chromium } from '@playwright/test';
+import { test, expect } from '@playwright/test';
 test.setTimeout(1900000) 
 
 test('test', async () => {
