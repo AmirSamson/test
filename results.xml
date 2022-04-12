@@ -1,0 +1,6 @@
+<testsuites id="" name="" tests="1" failures="0" skipped="0" errors="0" time="3.797">
+<testsuite name="e2e/temp/test-2000.spec.ts" timestamp="1649757563449" hostname="" tests="1" failures="0" skipped="0" time="3.615" errors="0">
+<testcase name="e2e temp basic test" classname="[Desktop Chrome] › e2e/temp/test-2000.spec.ts:5:5 › e2e › temp › basic test" time="3.615">
+</testcase>
+</testsuite>
+</testsuites>

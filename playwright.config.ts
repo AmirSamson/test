@@ -48,6 +48,7 @@ const isCI = (process.env["CI"] ?? "false") === "true",
       // },
     ],
     reporter: [
+      ["junit", { outputFile: "results.xml" }],
       ["html", { open: "never", outputFolder: "./coverage/e2e/" }],
       ["json", { outputFile: "./coverage/e2e/report.json" }],
       [
@@ -61,7 +62,7 @@ const isCI = (process.env["CI"] ?? "false") === "true",
     ],
     retries: isCI ? 2 : 0,
     testMatch: "*.spec.{js,ts}",
-    timeout: ms("1m"),
+    timeout: ms("2m"),
     use: {
       contextOptions: {
         ignoreHTTPSErrors: true,
